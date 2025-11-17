@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        <style>
+            .container-fluid p{
+                border: 1px solid black;
+                font-weight: 400;
+            }
+        </style>
+</head>
+<body>
+    <div class="container-fluid mx-auto w-50  shadow py-3">
+        <div class="output d-flex gap-2 mx-auto justify-content-center align-items-center">
+            <p id="output1" class="p-2 shadow"></p>
+            <p id="output2" class="p-2 shadow"></p>
+        </div>
+        <div class="button mx-auto text-center">
+            <button onclick="RollDice()" class="border-0 bg-success text-white">Roll Dice</button>
+        </div>
+
+        <div class="results text-center display-6" id="results"></div>
+    </div>
+</body>
+<script>
+    function RollDice() {
+     let output1= document.getElementById('output1')
+    let output2 = document.getElementById('output2')
+    let randOutput1 =Math.ceil(Math.random()*6)
+    let randOutput2 = Math.ceil(Math.random()*6)
+        output1.innerHTML = randOutput1
+        output2.innerHTML = randOutput2
+
+         let results = document.getElementById('results')
+    let total = `${randOutput1+randOutput2}`
+    results.innerHTML = total
+    }
+   
+    
+
+</script>
+</html>

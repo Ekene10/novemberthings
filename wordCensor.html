@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main class="m-auto p-4 w-50 rounded shadow">
+        <h1 class="fw-bold text-center">Word Censor Application</h1>
+        <textarea name="wordInput" id="wordInput" class="form-control mt-4"></textarea>
+        <button onclick="censorWords()" class="btn btn-success w-100 py-2 mt-4">Censor Word</button>
+        <div class="mt-4" id="output">  
+        </div>
+    </main>
+</body>
+</html>
+<script>
+    function censorWords() {
+        const wordInput = document.getElementById('wordInput')
+        const output = document.getElementById('output')
+        console.log(wordInput.value.trim());
+        console.log(output);
+        let censoredWord = wordInput.value.trim().toLowerCase().replaceAll('fuck', 'f**k').replaceAll('bastard', 'b**t**d')
+        output.innerHTML = `<h3>${censoredWord.replace(censoredWord[0], censoredWord[0].toUpperCase())}</h3>`
+    }
+</script>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="d-flex ">
+        <button onclick="substract()" class="btn btn-danger">-</button>
+        <div id="results" class="p-2"></div>
+        <button onclick="add()"class="btn btn-success">+</button>
+    </div>
+    <div>
+        <h3></h3>
+        <input type="text" id="inputTag1">
+        <input type="text" id="inputTag2">
+        <button onclick="addnum()">Add</button>
+        <div id="answer"></div>
+    </div>
+</body>
+</html>
+<script>
+ function addnum () {
+    let inputTag1 = document.getElementById('inputTag1')
+    let inputTag2 = document.getElementById('inputTag2')
+    let answer = document.getElementById('answer')
+
+    console.log(inputTag1.value);
+     console.log(inputTag2.value);
+    
+     answer.innerHTML = (parseFloat(inputTag1.value) + parseFloat(inputTag2.value))
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    let number = 0
+    let results = document.getElementById('results')
+    function substract(){
+     number--
+     results.innerHTML = number
+    }
+    function add(){
+        number++
+        results.innerHTML = number
+    }
+</script>

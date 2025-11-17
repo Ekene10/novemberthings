@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>how far</h1>
+</body>
+</html>
+<script>
+    //primitive data type
+    //datas that are not modifiable
+    //primitive datas
+    //string
+    //number
+    //undefined
+    //null
+    //boolean
+
+    //non primitive
+    //arrays
+    //objects
+
+    //string
+    let newString = new String()
+    newString = 'hello'
+    let myString = 'how far my guy'
+    let myString1 = "how far my guy"
+    let myString2 = `how far my guy`
+
+ console.log(newString)
+ console.log(newString)
+ console.log(newString)
+ console.log(newString)
+
+ //string Methods
+ //length
+ console.log(myString.length);
+ 
+ //accessing the last character in a string 
+ console.log(newString[newString.length -1]);
+
+ //includes 
+ let helloString = 'hello'
+ console.log(helloString.includes('hell'))
+
+ //lower case & upper case
+ let sent = 'how are you guys'
+ console.log(sent.toUpperCase());
+
+ let sentNew = 'HOW ARE YOU GUYS'
+ console.log(sent.toLowerCase())
+
+
+//trim
+let sentence = '      how far my guy            '
+console.log(sentence.trim());
+
+//concat
+let firstName = 'Ekene'
+let lastName = 'Nwachukwu'
+console.log(firstName.concat(" ",lastName,' ','victor'))
+console.log(firstName +' ' + lastName + ' '+ 'ekene')
+
+//Startswith & Endswith
+let startEx = 'Hey there'
+console.log(startEx.toLocaleLowerCase().startsWith('hey there'));
+
+let endsEx = 'how far my guy'
+console.log(endsEx.endsWith('how far my guy'));
+
+//slice
+let sliceEx = 'how are you doing?'
+console.log(sliceEx.slice(0,7))
+
+//replace
+let replaceEx = 'Javascript is fun'
+console.log(replaceEx.replace('Javascript', 'typescript'));
+console.log(replaceEx);
+
+let newSentence = 'What the heck is going on nigga, this nigga is messing with with me';
+console.log(newSentence.replace('heck', 'h**k').replace('nigga', 'n****a'))
+
+    (function hello() {
+       console.log("Hello how are you doing?");
+        
+    })()
+    // //Interpolation
+    // let name = 'Dami'
+    // console.log(my name is ${name});
+
+    // let a = 10
+    // let b = 20
+    // console.log(The value of ${a} and ${b} is equals to ${a + b});
+
+
+
+
+    // //assign your name to a variable
+    // //create a sentence ans use your name in the sentence 
+    // //send it into the innerHtml of an HTML element 
+    // let newName = 'Ragnar'
+    // let oldSentence = My name is ${newName}
+    // const newh2 = document.getElementById('newh2')
+    // newh2.innerHTML = `
+    // hello everyone my name is ${newName}
+    // `
+    // console.log(newh2.innerHTML)
+
+
+    // //split
+    // let newSent = 'How are you doing?'
+    // console.log(newSent.split(' '));
+
+    // let and = '10'
+    // console.log(typeof newSent);
+    // console.log(typeof a);
+
+    // let Damilola = document.getElementById('Damilola')
+    // console.log(Damilola);
+    // function showInputValue() {
+    //     console.log(Damilola.Value);
+    //     //create an html element element that has the innerhtml element
+    //     //grab the element in javascript
+    //     //send the inputTag.value into the innerHtml of the HTML element 
+
+    // }
+
+
+    //  let heading = document.getElementById('here')
+    // let input = document.getElementById('input')
+    // function show() {
+        
+    //     heading.innerHTML = input.value
+    //     input.value = ''
+    // }
+</script>

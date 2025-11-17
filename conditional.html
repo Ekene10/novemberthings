@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="username" placeholder="Username">
+    <input type="text" placeholder="password" id="password">
+    <button onclick="signIn()">Sign In</button>
+    <input type="text" id="classGrade">
+    <button onclick="checkGrade()">check-grade</button>
+</body>
+
+</html>
+<script>
+    function signIn() {
+        const username = document.getElementById('username')
+        const password = document.getElementById('password')
+
+        console.log(username.value.trim());
+        console.log(password.value.trim());
+        // username.value.trim() = 'fghcjhg'
+        // password.value.trim() = ''
+        if (username.value.trim() === '' || password.value.trim() === '') {
+            console.log('All fields are madatory');
+        }
+    }
+    // Truthy Values
+    // All strings except an empty string
+    // All numbers except zero 
+    // The boolean true itself
+
+    // Falsy Values
+    // An empty String
+    // Zero as a number
+    // The boolean false itself
+    // undefined
+    // null 
+
+    let myString = 'njchg'
+    if (!myString) {
+        console.log('My string is empty');
+    }
+
+    // if else
+
+    if (myString === '') {
+        console.log('My String is empty');
+    } else {
+        console.log('My string has characters in it');
+    }
+
+    // if else if
+
+    // Weather Condition, Rainy, Sunny, Cloudy, Windy
+    let weatherCondition = 'Windyafsy'
+    if (weatherCondition === 'Rainy') {
+        console.log('It is rainy today');
+    } else if (weatherCondition === 'Sunny') {
+        console.log('It is sunny today');
+    } else if (weatherCondition === 'Cloudy') {
+        console.log('It is cloudy today');
+    } else if (weatherCondition === 'Windy') {
+        console.log('It is windy today');
+    } else {
+        console.log('Invalid input');
+    }
+    function checkGrade() {
+        const classGrade =document.getElementById('classGrade')
+        console.log(+classGrade.value.trim());
+        if (classGrade.value.trim() === '') {
+            console.log('Invalid input');
+        } else if (isNaN(+classGrade.value.trim())) {
+            console.log('Please input a number');
+        } 
+     
+    }
+    console.log(+'100'); 
+    console.log(+'hello');
+    
+
+    
+</script>

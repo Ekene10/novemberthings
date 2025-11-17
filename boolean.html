@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #quantityNum{
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="welcome">Welcome</h3>
+    <div style="display: flex;">
+        <button onclick="decrease()">-</button>
+        <p id="quantityNum"></p>
+        <button onclick="increase()">+</button>
+    </div>
+
+</body>
+</html>
+<script>
+    // Booleans
+    let bool = true
+    let bool2 = false
+
+    // Operators
+    // Comaparison operators - comparison operators always return booleans 
+    console.log(4 > 3); //greater than
+    console.log(4 < 3); //less than
+    console.log(4 <= 4); //less than or equal to
+    console.log(4 >= 4); //greater than or equal to
+    console.log(4 == 4); //  == is loose equality 
+    console.log(4 == '4'); // == is loose equality 
+
+    // Type Cohersion
+    console.log(+'4');
+    console.log(0 == '');
+    console.log(+'');
+    console.log(+'  '.trim());
+
+    console.log(4 === '4');  // === is strict equality checks the data and the data type
+    console.log(4 != '4'); // != is not loosely equal to
+    console.log(4 !== '4'); // !== is not strictly equal to
+
+    //Assignment Operator
+
+    //+= add to previous value
+    //works with numbers and strings
+    let num = 45 
+
+    let newNum = 20
+
+    newNum += 30
+
+    let welcome = document.getElementById('welcome')
+    welcome.innerHTML += ' Dotun'
+
+    //-=
+    let a = 13
+
+    a -= 3
+
+    // /=
+    let b = 9
+    b /= 3
+
+    // /*
+    let c =3
+
+    c *= 6
+
+    console.log(c);
+
+    //Arithmetic operators
+    console.log(10 + 30);
+    console.log(10 - 30);
+    console.log(10 * 30);
+    console.log(10 / 30);
+    console.log(9 % 2);
+
+    //logical operators
+    //OR Operator
+    let logOne = false  false  false || false
+    console.log(logOne);
+
+    console.log();
+
+    //AND Operator
+    let logOpe2 = true && false
+
+    console.log(!!!false);
+
+    //Increment operator
+    //Post increment
+
+    let int = 5
+    console.log(int++);
+    console.log(int);
+
+    //Pre Increment
+    let ind = 0
+    console.log(++ind);
+    console.log(ind);
+
+    //Post decrement 
+    let i = 5
+    console.log(i--);
+    console.log(i);
+
+    //Pre decrement
+    console.log(--i);
+    console.log(i);
+
+
+    let numQuan = 0
+    const quantityNum = document.getElementById('quantityNum')
+
+    function decrease() {
+        quantityNum.innerHTML = <h3>${--numQuan}</h3>
+    }
+
+    function increase() {
+        quantityNum.innerHTML = <h3>${++numQuan}</h3>
+    }
+
+
+
+</script>

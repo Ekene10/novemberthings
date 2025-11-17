@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid mx-auto w-50 shadow">
+    <div class="output d-flex gap-2 mx-auto justify-content-center align-items-center">
+    <p id="wordOutput1" class=""></p>
+    <p id="wordOutput2"></p>
+    </div>
+    <button onclick="rolldice()">roll dice</button>
+    <div id="results"></div>
+    </div>
+</body>
+</html>
+<script>
+   function rolldice() {
+     let wordOutput1 = document.getElementById('wordOutput1')
+     let wordOutput2 = document.getElementById('wordOutput2')
+    let randwordOutput1 = Math.ceil(Math.random()*6)
+    let randwordOutput2 = Math.ceil(Math.random()*6)
+    wordOutput1.innerHTML = randwordOutput1
+     wordOutput2.innerHTML = randwordOutput2
+     
+    let results = document.getElementById('results')
+    let total = `${randwordOutput1+randwordOutput2}`
+    results.innerHTML = total
+   }
+</script>

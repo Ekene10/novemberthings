@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inp1">
+    <input type="text" id="inp2">
+    <button onclick="addNum()">Add</button>
+</body>
+
+</html>
+<script>
+    //number
+    let a = 10.886543
+
+    //toFixed
+    console.log(a.toFixed(3));
+    console.log('10' + '25');
+
+    //parseInt(rounds up decimal numbers), parseFloat(doesn't round up decimal numbers), Number, +
+
+    let b = '10.856'
+    let c = '25.747838'
+    console.log(parseInt(b) + parseInt(c));
+    console.log(parseFloat(b) + parseFloat(c));
+
+
+    function addNum() {
+        const inp1 = document.getElementById('inp1')
+        const inp2 = document.getElementById('inp2')
+        //inp1 = '13'
+        console.log(parseFloat(inp1.value) + parseFloat(inp2.value));
+    }
+
+    //number
+    let d = '23'
+    console.log(Number(d));
+
+    // +
+    let f = '52'
+    console.log(+f + 45);
+
+    //Math Max
+    console.log(Math.max(3, 5, 2, 6, 8, 1, 9, 3, 4, 5, 6));
+
+    //Math min
+    console.log(Math.min(6, 3, 0, 5, 2, 3, 5, 8, 9, 3, 2));
+
+    //Math round (rounds up to the nearest whole number)
+    console.log(Math.round(10.6));
+    console.log(Math.round(10.4));
+
+    //Math floor (rounds up to lowest whole number possible)
+    console.log(Math.floor(10.9999));
+    console.log(Math.floor(10.1111));
+     
+    //Math ceil (rounds up to the highest whole number possible)
+    console.log(Math.ceil(10.0001));
+     
+    //Math random (calling a random number between 0 and 1)
+    console.log(Math.floor(Math.random() * 11));
+    console.log(Math.ceil(Math.random() * 11));
+    console.log(Math.round(Math.random() * 11));
+    
+    console.log(Math.floor(Math.random() * 101));
+     
+    console.log(Math.ceil(Math.random() * 11) + 4);
+
+    console.log(Math.floor(Math.random() * 101) + 100);
+    0.999 
+    
+    //null and Undefined
+   let thisClass 
+   console.log(thisClass);
+
+   let nullVariable = null
+   console.log();
+
+</script>

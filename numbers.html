@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp1">
+    <input type="text" id="inp2">
+    <button onclick="addNumber()">Add</button>
+</body>
+</html>
+<script>
+    // Number 
+    // let a = 10.886543
+    // toFixed
+    // console.log(a.toFixed(3));
+    // console.log('10' + '25');
+    // parseInt, parseFloat, Number, +
+    // let b = '10.856'
+    // let c = '25.412'
+    
+    // console.log(parseInt(b) + parseInt(c));
+    // console.log(parseFloat(b) + parseFloat(c));
+    function addNumber() {
+        const inp1 = document.getElementById('inp1')
+        const inp2 = document.getElementById('inp2')
+        // inp1 = '13'
+        console.log(parseFloat(inp1.value) + parseFloat(inp2.value));
+    }
+    
+    // Number
+    let d = '23'
+    console.log(Number(d));
+
+    console.log (Math.round(Math.random()*100));
+
+    // console.log (Math.floor(5)(Math.random()*15));
+
+    console.log (Math.floor(Math.random()*101) + 100);
+</script>
