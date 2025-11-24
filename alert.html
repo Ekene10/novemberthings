@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+</head>
+
+<body>
+    <input type="text" id="gradeInput">
+    <button onclick="checkGrade()">Check Grade</button>
+    <button onclick="removeAcc()">Delete</button>
+    <h1 id="username"></h1>
+    <button onclick="changeUsername()">Change Username</button>
+</body>
+
+</html>
+<script>
+    // Alert is to give a user a message
+    function checkGrade() {
+        const gradeInput = document.getElementById('gradeInput')
+        if (!gradeInput.value.trim()) {
+            // alert
+            alert('All fields are mandatory')
+        } else if (isNaN(gradeInput.value.trim()) || +gradeInput.value.trim() < 0 || +gradeInput.value.trim() > 100) {
+            alert('Please input a number between 0 to 100')
+        } else if (+gradeInput.value.trim() >= 80) {
+            alert('Your Grade is A')
+        } else if (+gradeInput.value.trim() >= 70) {
+            alert('Your Grade is B')
+        } else if (+gradeInput.value.trim() >= 60) {
+            alert('Your Grade is C')
+        } else if (+gradeInput.value.trim() >= 40) {
+            alert('Your grade is D')
+        } else {
+            alert('Your grade is F')
+        }
+        if(gradeInput != Number) {
+        alert ('input a number')
+      }
+    }
+    // alert, confirm, prompt
+
+    function removeAcc() {
+        let confirmer = confirm('Are you sure you want to delete?')
+        if (confirmer) {
+            alert('Your account has been deleted')
+        }
+    }
+
+    // Prompt
+    let user = 'Ekene'
+    const userName = document.getElementById('username')
+    userName.innerHTML = `Hello ${user}`
+    function changeUsername() {
+        let promptReturn = prompt('What do you want to edit your userame to be?', user)
+        console.log(promptReturn);
+        if (promptReturn.trim().toLowerCase() === user.toLowerCase()) {
+            alert('Please make a valid change')
+        } else {
+            user = promptReturn
+            userName.innerHTML = `Hello ${user}`
+        }
+      if (!promptReturn) {
+         alert('Please make a valid change')
+      }
+      
+    }
+
+</script>
